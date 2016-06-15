@@ -12,4 +12,3 @@
     $locationProvider.hashPrefix('!');
   }
 })();
-
