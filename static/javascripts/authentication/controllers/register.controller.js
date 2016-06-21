@@ -7,14 +7,6 @@
 
   RegisterController.$inject = ['$location', '$scope', 'Authentication'];
 
-  activate();
-
-  function activate() {
-    if (Authentication.isAuthenticated()) {
-      $location.url('/');
-    }
-  }
-
   function RegisterController($location, $scope, Authentication) {
     var vm = this;
 
@@ -34,6 +26,12 @@
       function registerErrorFn(data, status, headers, config) {
         console.error('Epic failure!');
       }
+      function activate() {
+          if (Authentication.isAuthenticated()) {
+            $location.url('/');
+          }
+      }
+
     }
   }
 })();
