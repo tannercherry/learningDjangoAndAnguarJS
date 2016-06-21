@@ -14,4 +14,3 @@
     .module('thinkster.authentication.services', ['ngCookies']);
 })();
 
-
